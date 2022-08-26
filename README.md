@@ -4,7 +4,14 @@
 
 ```
 // 패키지 매니저는 yarn을 사용합니다
+
+.env 파일 설정
+REACT_APP_API = 추후 추가 예정
+
+// 필수 패키지 설치
 yarn install
+
+// 프로젝트 시작
 yarn start
 ```
 
@@ -23,9 +30,10 @@ yarn start
 | style    | 스타일링, 변수명 수정              |
 | docs     | README.md 작성,주석 추가           |
 
-#### 브랜치 네이밍 컨벤션 (약식)
+#### 브랜치 네이밍 컨벤션
 
 예시) `feature/signIn`
+
 모든 feature는 develop에서 분기합니다
 
 | 머릿말  | 설명                        |
