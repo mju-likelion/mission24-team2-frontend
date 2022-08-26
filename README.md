@@ -1,4 +1,4 @@
-# 경기남부 해커톤 Mission24 Team2 Front-End
+# 경기남부 해커톤 Mission24 Team2 Front-End ([🔗 Server](https://github.com/mju-likelion/mission24-team2-backend))
 
 ## ✨ Demo
 추후 추가 예정
