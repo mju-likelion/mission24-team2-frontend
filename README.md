@@ -1,6 +1,9 @@
 # 경기남부 해커톤 Mission24 Team2 Front-End
 
-## How to start
+## ✨ Demo
+추후 추가 예정
+
+## 🔒 How to start
 
 ```
 // 패키지 매니저는 yarn을 사용합니다
@@ -15,7 +18,7 @@ yarn install
 yarn start
 ```
 
-## Convention
+## ⚖ Convention
 
 #### 커밋 컨벤션
 
@@ -43,10 +46,19 @@ yarn start
 | feature | 기능 단위 구현              |
 | fix     | master에서 발견된 버그 수정 |
 
-## Tech Stack
+## 🛠 Tech Stack
 
 - React.js
 - react-router-dom
 - Axios
 - MUI ([Guid](https://mui.com/material-ui/react-autocomplete/))
 - Recoil ([Guid](https://recoiljs.org/ko/docs/introduction/installation))
+
+## 👩‍👦‍👦 Team
+| 이름   | 역할                        |
+| ------ | --------------------------- |
+| 김민규 | -               |
+| 박은서 | -                   |
+| 배한조 | -              |
+| 윤혜민 | - |
+| 조민지 | - |
