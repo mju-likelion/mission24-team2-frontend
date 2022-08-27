@@ -67,37 +67,35 @@ const PostContainer = ({ post }) => {
 };
 
 const Contents = styled.div`
-  width: 1226px;
-  min-height: 940px;
+  width: 100%;
+  min-height: 1100px;
   border-radius: 20px;
+  margin-top: 60px;
+  margin-left: 200px;
   background: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
-  border: 1px solid gray;
 `;
 
 const TopDiv = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: row;
+  width: 100%;
+  //background-color: green;
   margin-bottom: 20px;
-  gap: 0 30px;
+  //gap: 0 30px;
 `;
 
 const Logo = styled.div`
   display: flex;
-  position: absolute;
-  left: 60px;
-  top: 10px;
+  margin-left: 110px;
   align-items: center;
   justify-content: center;
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  margin-left: 20px;
-  margin-top: 36px;
-  margin-right: 15px;
-  margin-bottom: 40px;
+  //margin-left: -35%;
 `;
 
 const SmallBlack = styled.p`
@@ -135,14 +133,14 @@ const Text = styled.p`
   width: 850px;
   font-size: 20px;
   color: #000000;
-  margin-left: -5px;
   line-height: 30px;
+  margin-top: -5px;
 `;
 
 const Icon = styled.button`
   width: 20px;
-  margin-left: 1150px;
-  margin-top: 16px;
+  margin-left: 95%;
+  margin-top: 30px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -150,7 +148,16 @@ const Icon = styled.button`
 
 const RatingDiv = styled.div`
   margin-top: -3px;
+  margin-left: 5px;
   width: 1100px;
+`;
+
+const InDiv = styled.div`
+  display: flex;
+  width: 100%;
+  margin-left: 200px;
+  //justify-content: flex-end;
+  // background-color: red;
 `;
 
 export default PostContainer;
