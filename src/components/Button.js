@@ -1,9 +1,16 @@
 import styled from '@emotion/styled';
 import { Button } from '@mui/material';
 
-const Buttons = ({ width, height, fontSize, children }) => {
+const Buttons = ({ width, height, fontSize, isSubmitPossible, isSumbit, children, onClick }) => {
   return (
-    <ButtonBox width={width} heigh={height} fontSize={fontSize}>
+    <ButtonBox
+      onClick={onClick}
+      disabled={isSubmitPossible}
+      width={width}
+      heigh={height}
+      fontSize={fontSize}
+      type={isSumbit ? 'submit' : 'button'}
+    >
       {children}
     </ButtonBox>
   );

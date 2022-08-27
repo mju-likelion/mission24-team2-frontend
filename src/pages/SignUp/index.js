@@ -4,6 +4,8 @@ import Sign from '../../components/Sign';
 import Buttons from '../../components/Button';
 import { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
+import Axios from '../../lib/axios';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
   const initForm = {
@@ -13,6 +15,7 @@ const SignUp = () => {
     nickname: '',
   };
 
+  const navigate = useNavigate();
   const [form, setForm] = useState(initForm);
   const { email, password, rePassword, nickname } = form;
 
@@ -37,6 +40,7 @@ const SignUp = () => {
   const [passwordValid, setPasswordValid] = useState(false);
   const [rePasswordVaild, setRePasswordVaild] = useState(false);
   const [nicknameValid, setNicknameValid] = useState(false);
+  const [isSubmitPossible, setIsSubmitPossible] = useState(false);
 
   const inputVaild = type => {
     let msg = null;
@@ -59,6 +63,22 @@ const SignUp = () => {
     return msg;
   };
 
+  const onSubmit = async e => {
+    e.preventDefault();
+    try {
+      const req = await Axios.post('/client', {
+        email: email,
+        password: password,
+        nickname: nickname,
+      });
+      alert('회원가입 완료');
+      navigate('/');
+      return req.data;
+    } catch (e) {
+      throw new Error(`회원가입 에러 ${e}`);
+    }
+  };
+
   useEffect(() => {
     setEmailValid(email !== '' && email.match(emailPattern) !== null);
     setPasswordValid(password.length >= 8);
@@ -66,9 +86,13 @@ const SignUp = () => {
     setNicknameValid(nickname.length >= 3);
   }, [email, password, rePassword, nickname]);
 
+  useEffect(() => {
+    setIsSubmitPossible(!(emailValid && passwordValid && rePasswordVaild && nicknameValid));
+  }, [emailValid, passwordValid, rePasswordVaild, nicknameValid, isSubmitPossible]);
+
   return (
     <PageContainer>
-      <Sign>
+      <Sign onSubmit={onSubmit}>
         <Inputs
           name='email'
           value={email}
@@ -101,7 +125,9 @@ const SignUp = () => {
           styletype='form'
         />
         <Error>{inputVaild('nickname')}</Error>
-        <Buttons fontSize='30px'>가입 완료</Buttons>
+        <Buttons isSumbit isSubmitPossible={isSubmitPossible} fontSize='30px'>
+          가입 완료
+        </Buttons>
       </Sign>
     </PageContainer>
   );

@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 
-const Sign = ({ children }) => {
-  return <Wrap>{children}</Wrap>;
+const Sign = ({ onSubmit, children }) => {
+  return <Wrap onSubmit={onSubmit}>{children}</Wrap>;
 };
 
-const Wrap = styled.div`
+const Wrap = styled.form`
   width: 781px;
   margin: 0 auto;
   height: inherit;
