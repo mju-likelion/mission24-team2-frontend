@@ -33,42 +33,34 @@ const PostContainer = ({ post }) => {
         </Logo>
         <BoxTitle>
           <SmallGray>과목</SmallGray>
-          <Title>{post.category || '국어'}</Title>
+          <Title>{post.category || '???'}</Title>
         </BoxTitle>
         <BoxTitle>
           <SmallGray>강사명</SmallGray>
-          <Title>{post.techer || '박은서'}</Title>
+          <Title>{post.techer || '???'}</Title>
         </BoxTitle>
         <BoxTitle>
           <SmallGray>강의명</SmallGray>
-          <Title>
-            {post.lecture || '2023 김동욱클래스, 장Class - 수능 국어의 실전을 대비하다'}
-          </Title>
+          <Title>{post.lecture || '강의를 찾을 수 없습니다.'}</Title>
         </BoxTitle>
       </TopDiv>
       <LineDiv>
         <SmallGray>제목</SmallGray>
-        <SmallBlack>
-          {post.title ||
-            '쥐구멍마저 볕이 들게 해주시는 이 시대의 진정한 성군께, 그리고 그 제자들에게'}
-        </SmallBlack>
+        <SmallBlack>{post.title || '강의를 찾을 수 없습니다.'}</SmallBlack>
       </LineDiv>
       <LineDiv>
         <SmallGray>작성자</SmallGray>
-        <SmallBlack>{post.postId || 'pes1149'}</SmallBlack>
+        <SmallBlack>{post.postId || '?????'}</SmallBlack>
       </LineDiv>
       <LineDiv>
         <SmallGray>평점</SmallGray>
         <RatingDiv>
-          <Rating name='read-only' value={post.rating} readOnly precision={0.5} />
+          <Rating name='read-only' value={post.rating || '0'} readOnly precision={0.5} />
         </RatingDiv>
       </LineDiv>
       <LineDiv>
         <SmallGray>내용</SmallGray>
-        <Text>
-          {post.postContents ||
-            '현재 월클래스까지 강의가 나올 때마다 꼬박꼬박 들어온 좨수생(죄수 + 재수생)입니다'}
-        </Text>
+        <Text>{post.postContents || '강의를 찾을 수 없습니다.'}</Text>
       </LineDiv>
     </Contents>
   );
