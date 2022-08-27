@@ -11,6 +11,7 @@ const Buttons = ({ width, height, fontSize, children }) => {
 
 const ButtonBox = styled(Button)`
   background-color: #ffffff66;
+  border-radius: 20px;
   color: #343434;
   width: ${props => (props.width ? props.width : '246px')};
   height: ${props => (props.height ? props.height : '95px')};

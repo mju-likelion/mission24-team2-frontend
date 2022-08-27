@@ -3,6 +3,7 @@ import { Input } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
 const Inputs = ({ name, value, onChange, placeholder, styletype }) => {
+  const isPassword = name === 'password' || name === 'rePassword';
   return (
     <Wrap>
       <InputContent
@@ -12,6 +13,7 @@ const Inputs = ({ name, value, onChange, placeholder, styletype }) => {
         placeholder={placeholder}
         disableUnderline={true}
         styletype={styletype}
+        type={isPassword ? 'password' : 'text'}
       />
       {styletype !== 'form' && <Icon />}
     </Wrap>
