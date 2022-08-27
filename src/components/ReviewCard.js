@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Rating } from '@mui/material';
 import styled from '@emotion/styled';
-import { margin, width } from '@mui/system';
 
 const ReviewCard = ({ logo, lecturer, subject, title, content, rating }) => {
   return (
@@ -21,7 +20,7 @@ const ReviewCard = ({ logo, lecturer, subject, title, content, rating }) => {
 };
 
 const PlatformLogo = styled.img`
-  margin: 20px
+  margin: 20px;
   width: 100px;
   height: 100px;
 `;
@@ -32,17 +31,17 @@ const LecturereCont = styled.div`
 
 const Lecturer = styled.p`
   margin: 10px 30px;
-  fontsize: 13px;
+  font-size: 13px;
 `;
 
 const Subject = styled.p`
-  fontsize: 12px;
+  font-size: 12px;
   margin: 10px;
   color: #4f4f4f;
 `;
 
 const ReviewTitle = styled.p`
-  fontsize: 14px;
+  font-size: 14px;
 `;
 
 const Content = styled.div`
