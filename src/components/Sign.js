@@ -1,7 +1,13 @@
 import styled from '@emotion/styled';
+import Logo from '../img/svg/Logo';
 
 const Sign = ({ onSubmit, children }) => {
-  return <Wrap onSubmit={onSubmit}>{children}</Wrap>;
+  return (
+    <Wrap onSubmit={onSubmit}>
+      <Logo />
+      <>{children}</>
+    </Wrap>
+  );
 };
 
 const Wrap = styled.form`
@@ -12,6 +18,9 @@ const Wrap = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  svg {
+    margin-bottom: 45px;
+  }
   gap: 7px 0;
 `;
 
