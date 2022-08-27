@@ -8,7 +8,7 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Logo from '../img/svg/Logo';
 import Inputs from './Inputs';
 
-const ReviewBox = ({ children }) => {
+const ReviewBox = ({ onFilter, children }) => {
   const [alignment, setAlignment] = useState('');
   const [searchText, setSearchText] = useState('');
 
@@ -50,6 +50,7 @@ const ReviewBox = ({ children }) => {
                   WebkitJustifyContent: 'left',
                   paddingLeft: '20px',
                 }}
+                onClick={onFilter}
                 value='국어'
               >
                 국어
@@ -63,6 +64,7 @@ const ReviewBox = ({ children }) => {
                   WebkitJustifyContent: 'left',
                   paddingLeft: '20px',
                 }}
+                onClick={onFilter}
                 value='수학'
               >
                 수학
@@ -76,6 +78,7 @@ const ReviewBox = ({ children }) => {
                   WebkitJustifyContent: 'left',
                   paddingLeft: '20px',
                 }}
+                onClick={onFilter}
                 value='영어'
               >
                 영어
@@ -89,6 +92,7 @@ const ReviewBox = ({ children }) => {
                   WebkitJustifyContent: 'left',
                   paddingLeft: '20px',
                 }}
+                onClick={onFilter}
                 value='한국사'
               >
                 한국사
@@ -102,6 +106,7 @@ const ReviewBox = ({ children }) => {
                   WebkitJustifyContent: 'left',
                   paddingLeft: '20px',
                 }}
+                onClick={onFilter}
                 value='사탐'
               >
                 사탐
@@ -115,13 +120,14 @@ const ReviewBox = ({ children }) => {
                   WebkitJustifyContent: 'left',
                   paddingLeft: '20px',
                 }}
+                onClick={onFilter}
                 value='과탐'
               >
                 과탐
               </ToggleButton>
             </ToggleButtonGroup>
           </ToggleWrap>
-          <LoginBox></LoginBox>
+          {/* <LoginBox></LoginBox> */}
         </SideBar>
         <ChildBox>{children}</ChildBox>
       </Wrap>

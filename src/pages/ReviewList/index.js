@@ -15,9 +15,15 @@ const ReviewList = () => {
       const res = await Axios.get('/lecture', { headers: { Authorization: token || '' } });
       console.log('데이터 패치 완료', res);
       setReviews(res.data);
+      return res.data;
     } catch (e) {
       console.log('리뷰 패치 에러 발생', e);
     }
+  };
+
+  const onFilter = async e => {
+    const data = await fetchAllReviews();
+    setReviews(data.filter(item => item.category === e.target.value));
   };
 
   useEffect(() => {
@@ -25,7 +31,7 @@ const ReviewList = () => {
   }, []);
 
   return (
-    <ReviewBox>
+    <ReviewBox onFilter={onFilter}>
       <ReviewWrap>
         {reviews.map(review => (
           <ReviewCard
