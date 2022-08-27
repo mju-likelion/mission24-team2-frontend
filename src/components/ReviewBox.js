@@ -65,8 +65,6 @@ const SideBar = styled.div`
   width: 420px;
 `;
 
-const ChildBox = styled.div`
-  background-color: red;
-`;
+const ChildBox = styled.div``;
 
 export default ReviewBox;
