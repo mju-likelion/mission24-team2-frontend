@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import Home from './pages/Home';
+import ReviewDetail from './pages/ReviewDetail';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 
@@ -10,6 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/review-detail/:id' element={<ReviewDetail />} />
           <Route path='/sign-up' element={<SignUp />} />
           <Route path='/sign-in' element={<SignIn />} />
         </Routes>
