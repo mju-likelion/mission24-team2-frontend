@@ -23,7 +23,6 @@ const Home = () => {
           >
             시작하기
           </Buttons>
-          <WritingReview></WritingReview>
         </ContentBox>
       </Content>
     </PageContainer>
