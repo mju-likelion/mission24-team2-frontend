@@ -5,7 +5,7 @@ const ReviewDetail = () => {
   const post = {
     site: '이투스',
     category: '국어',
-    techer: '국어쌤',
+    teacher: '국어쌤',
     lecture: '국어다',
     title: '강의평 이름',
     postId: '닉네임',
@@ -15,7 +15,7 @@ const ReviewDetail = () => {
   return (
     <>
       <ReviewBox>
-        <PostContainer post={post} />;
+        <PostContainer post={post} />
       </ReviewBox>
     </>
   );
