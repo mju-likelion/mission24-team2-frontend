@@ -1,5 +1,6 @@
 import PageContainer from './PageContainer';
 import styled from '@emotion/styled';
+import MyToggleBtn from './ToggleBtn';
 import { Children, useState } from 'react';
 import LoginBox from './LoginBox';
 import ToggleButton from '@mui/material/ToggleButton';
@@ -23,7 +24,7 @@ const ReviewBox = ({ children }) => {
     <PageContainer>
       <Wrap>
         <SideBar>
-          <Logo width={'300'} height={'54'} />
+          <Logo width={'380'} height={'54'} />
           <Inputs
             name='searchInstructor'
             value={searchText}
@@ -38,13 +39,86 @@ const ReviewBox = ({ children }) => {
               orientation='vertical'
               onChange={handleChange}
               aria-label='Platform'
+              sx={{ gap: '20px' }}
             >
-              <ToggleButton value='국어'>국어</ToggleButton>
-              <ToggleButton value='수학'>수학</ToggleButton>
-              <ToggleButton value='영어'>영어</ToggleButton>
-              <ToggleButton value='한국사'>한국사</ToggleButton>
-              <ToggleButton value='사탐'>사탐</ToggleButton>
-              <ToggleButton value='과탐'>과탐</ToggleButton>
+              <ToggleButton
+                sx={{
+                  width: '360px',
+                  backgroundColor: ' rgba(255, 255, 255, 0.4)',
+                  border: 'none',
+                  fontSize: '20px',
+                  WebkitJustifyContent: 'left',
+                  paddingLeft: '20px',
+                }}
+                value='국어'
+              >
+                국어
+              </ToggleButton>
+              <ToggleButton
+                sx={{
+                  width: '360px',
+                  backgroundColor: ' rgba(255, 255, 255, 0.4)',
+                  border: 'none',
+                  fontSize: '20px',
+                  WebkitJustifyContent: 'left',
+                  paddingLeft: '20px',
+                }}
+                value='수학'
+              >
+                수학
+              </ToggleButton>
+              <ToggleButton
+                sx={{
+                  width: '360px',
+                  backgroundColor: ' rgba(255, 255, 255, 0.4)',
+                  border: 'none',
+                  fontSize: '20px',
+                  WebkitJustifyContent: 'left',
+                  paddingLeft: '20px',
+                }}
+                value='영어'
+              >
+                영어
+              </ToggleButton>
+              <ToggleButton
+                sx={{
+                  width: '360px',
+                  backgroundColor: ' rgba(255, 255, 255, 0.4)',
+                  border: 'none',
+                  fontSize: '20px',
+                  WebkitJustifyContent: 'left',
+                  paddingLeft: '20px',
+                }}
+                value='한국사'
+              >
+                한국사
+              </ToggleButton>
+              <ToggleButton
+                sx={{
+                  width: '360px',
+                  backgroundColor: ' rgba(255, 255, 255, 0.4)',
+                  border: 'none',
+                  fontSize: '20px',
+                  WebkitJustifyContent: 'left',
+                  paddingLeft: '20px',
+                }}
+                value='사탐'
+              >
+                사탐
+              </ToggleButton>
+              <ToggleButton
+                sx={{
+                  width: '360px',
+                  backgroundColor: ' rgba(255, 255, 255, 0.4)',
+                  border: 'none',
+                  fontSize: '20px',
+                  WebkitJustifyContent: 'left',
+                  paddingLeft: '20px',
+                }}
+                value='과탐'
+              >
+                과탐
+              </ToggleButton>
             </ToggleButtonGroup>
           </ToggleWrap>
           <LoginBox></LoginBox>
@@ -55,18 +129,19 @@ const ReviewBox = ({ children }) => {
   );
 };
 
-const ToggleWrap = styled.div``;
+const ToggleWrap = styled.div`
+  margin-top: 20px;
+`;
 
 const Wrap = styled.div`
   display: flex;
+  padding: 30px;
 `;
 
 const SideBar = styled.div`
   width: 420px;
 `;
 
-const ChildBox = styled.div`
-  background-color: red;
-`;
+const ChildBox = styled.div``;
 
 export default ReviewBox;

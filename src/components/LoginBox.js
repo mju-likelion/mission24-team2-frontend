@@ -13,7 +13,7 @@ const LoginBox = () => {
 };
 
 const LoginDiv = styled.div`
-  width: 240px;
+  width: 300px;
   height: 90px;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 20px;

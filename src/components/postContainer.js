@@ -37,7 +37,7 @@ const PostContainer = ({ post }) => {
         </BoxTitle>
         <BoxTitle>
           <SmallGray>강사명</SmallGray>
-          <Title>{post.techer || '???'}</Title>
+          <Title>{post.teacher || '???'}</Title>
         </BoxTitle>
         <BoxTitle>
           <SmallGray>강의명</SmallGray>
