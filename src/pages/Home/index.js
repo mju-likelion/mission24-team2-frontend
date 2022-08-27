@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import Buttons from '../../components/Button';
 import PageContainer from '../../components/PageContainer';
+import WritingReview from '../../components/WirtingReview';
 import Logo from '../../img/svg/Logo';
 import { useNavigate } from 'react-router-dom';
 
@@ -22,6 +23,7 @@ const Home = () => {
           >
             시작하기
           </Buttons>
+          <WritingReview></WritingReview>
         </ContentBox>
       </Content>
     </PageContainer>
