@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import Buttons from '../../components/Button';
 import PageContainer from '../../components/PageContainer';
+import WritingReview from '../../components/WirtingReview';
 import Logo from '../../img/svg/Logo';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
           <Buttons width='464px' height='117px' fontSize='50px'>
             시작하기
           </Buttons>
+          <WritingReview></WritingReview>
         </ContentBox>
       </Content>
     </PageContainer>
