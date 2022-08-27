@@ -31,20 +31,18 @@ const PostContainer = ({ post }) => {
         <Logo>
           <img src={pic || 'https://via.placeholder.com/150'} alt='샘플이미지' width={200} />
         </Logo>
-        <InDiv>
-          <BoxTitle>
-            <SmallGray>과목</SmallGray>
-            <Title>{post.category || '???'}</Title>
-          </BoxTitle>
-          <BoxTitle>
-            <SmallGray>강사명</SmallGray>
-            <Title>{post.techer || '???'}</Title>
-          </BoxTitle>
-          <BoxTitle>
-            <SmallGray>강의명</SmallGray>
-            <Title>{post.lecture || '강의를 찾을 수 없습니다.'}</Title>
-          </BoxTitle>
-        </InDiv>
+        <BoxTitle>
+          <SmallGray>과목</SmallGray>
+          <Title>{post.category || '???'}</Title>
+        </BoxTitle>
+        <BoxTitle>
+          <SmallGray>강사명</SmallGray>
+          <Title>{post.teacher || '???'}</Title>
+        </BoxTitle>
+        <BoxTitle>
+          <SmallGray>강의명</SmallGray>
+          <Title>{post.lecture || '강의를 찾을 수 없습니다.'}</Title>
+        </BoxTitle>
       </TopDiv>
       <LineDiv>
         <SmallGray>제목</SmallGray>

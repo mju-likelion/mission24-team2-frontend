@@ -2,20 +2,10 @@ import ReviewBox from '../../components/ReviewBox';
 import PostContainer from '../../components/postContainer';
 
 const ReviewDetail = () => {
-  const post = {
-    site: '이투스',
-    category: '국어',
-    techer: '국어쌤',
-    lecture: '국어다dfjk',
-    title: '강의평 이름fjdkfjalfdfjkdfj',
-    postId: '닉네임',
-    rating: '3',
-    postContents: '임시임시임시',
-  };
   return (
     <>
       <ReviewBox>
-        <PostContainer post={post} />;
+        <PostContainer post={post} />
       </ReviewBox>
     </>
   );

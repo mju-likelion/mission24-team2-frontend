@@ -22,6 +22,7 @@ const Inputs = ({ name, value, onChange, placeholder, styletype }) => {
 
 const Wrap = styled.div`
   position: relative;
+  width: 375px;
 `;
 
 const InputContent = styled(Input)`
