@@ -10,7 +10,7 @@ import daesung from '../img/daesung.png';
 
 const PostContainer = ({ post }) => {
   let pic = '';
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
   if (post.site == '메가스터디') {
     pic = megastudy;
   } else if (post.site == '이투스') {
@@ -22,7 +22,7 @@ const PostContainer = ({ post }) => {
     <Contents>
       <Icon
         onClick={() => {
-          alert('홈으로 이동하는 버튼');
+          navigate('/review-list');
         }}
       >
         <ArrowBackIosNewIcon />
@@ -31,47 +31,47 @@ const PostContainer = ({ post }) => {
         <Logo>
           <img src={pic || 'https://via.placeholder.com/150'} alt='샘플이미지' width={200} />
         </Logo>
-        <BoxTitle>
+        {/* <BoxTitle>
           <SmallGray>과목</SmallGray>
-          <Title>{post.category || '???'}</Title>
+          <Title>{post.subject || '???'}</Title>
         </BoxTitle>
         <BoxTitle>
           <SmallGray>강사명</SmallGray>
-          <Title>{post.teacher || '???'}</Title>
+          <Title>{post.author || '???'}</Title>
         </BoxTitle>
         <BoxTitle>
           <SmallGray>강의명</SmallGray>
           <Title>{post.lecture || '강의를 찾을 수 없습니다.'}</Title>
-        </BoxTitle>
+        </BoxTitle> */}
       </TopDiv>
       <LineDiv>
         <SmallGray>제목</SmallGray>
-        <SmallBlack>{post.title || '강의를 찾을 수 없습니다.'}</SmallBlack>
+        <SmallBlack>{post.subject || '강의를 찾을 수 없습니다.'}</SmallBlack>
       </LineDiv>
-      <LineDiv>
+      {/* <LineDiv>
         <SmallGray>작성자</SmallGray>
         <SmallBlack>{post.postId || '?????'}</SmallBlack>
-      </LineDiv>
+      </LineDiv> */}
       <LineDiv>
         <SmallGray>평점</SmallGray>
         <RatingDiv>
-          <Rating name='read-only' value={post.rating || '0'} readOnly precision={0.5} />
+          <Rating name='read-only' value={post.stared || '0'} readOnly precision={0.5} />
         </RatingDiv>
       </LineDiv>
       <LineDiv>
         <SmallGray>내용</SmallGray>
-        <Text>{post.postContents || '강의를 찾을 수 없습니다.'}</Text>
+        <Text>{post.content || '강의를 찾을 수 없습니다.'}</Text>
       </LineDiv>
     </Contents>
   );
 };
 
 const Contents = styled.div`
-  width: 100%;
-  min-height: 1100px;
+  width: 80%;
+  min-height: 500px;
   border-radius: 20px;
   margin-top: 60px;
-  margin-left: 200px;
+  margin-left: 30px;
   background: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
