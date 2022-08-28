@@ -7,8 +7,11 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Logo from '../img/svg/Logo';
 import Inputs from './Inputs';
+import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const ReviewBox = ({ onFilter, children }) => {
+  const navigate = useNavigate();
   const [alignment, setAlignment] = useState('');
   const [searchText, setSearchText] = useState('');
 
@@ -25,6 +28,7 @@ const ReviewBox = ({ onFilter, children }) => {
       <Wrap>
         <SideBar>
           <Logo width={'380'} height={'54'} />
+          <Button onClick={() => navigate('/write')}>글쓰기</Button>
           <Inputs
             name='searchInstructor'
             value={searchText}

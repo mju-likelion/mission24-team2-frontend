@@ -12,10 +12,12 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 axios.defaults.baseURL = process.env.REACT_APP_API;
 
-const WritingReview = () => {
+const Write = () => {
+  const navi = useNavigate();
   const [lecturerList, setLecturereList] = useState([]);
   const [lectureList, setLectureList] = useState([]);
   const [platform, setPlatform] = useState('');
@@ -63,6 +65,7 @@ const WritingReview = () => {
       .then(res => {
         console.log(res.data);
         alert(res.data.id);
+        navi('/review-list');
       });
   };
 
@@ -220,4 +223,4 @@ const ReviewInfo = styled.div`
   }
 `;
 
-export default WritingReview;
+export default Write;
