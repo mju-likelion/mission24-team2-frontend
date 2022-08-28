@@ -17,7 +17,7 @@ const Home = () => {
             height='117px'
             fontSize='50px'
             onClick={() => {
-              navigate('/review-detail');
+              navigate('/review-list');
             }}
           >
             시작하기
