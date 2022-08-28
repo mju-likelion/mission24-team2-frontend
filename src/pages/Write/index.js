@@ -28,6 +28,13 @@ const Write = () => {
   const [reviewContent, setReviewContent] = useState('');
 
   useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      alert('로그인이 필요합니다.');
+      navi('/sign-in');
+    }
+  }, []);
+  useEffect(() => {
     axios
       .get('/lecture/filter', {
         headers: {

@@ -27,6 +27,10 @@ const ReviewList = () => {
   };
 
   useEffect(() => {
+    if (!token) {
+      alert('로그인이 필요합니다.');
+      navigate('/sign-in');
+    }
     fetchAllReviews();
   }, []);
 
