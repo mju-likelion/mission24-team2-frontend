@@ -11,14 +11,12 @@ const ReviewDetail = () => {
   const [post, setPost] = useState();
 
   const fetchReview = async () => {
-    console.log(router.id);
     try {
       const res = await Axios.get(`review?reviewId=${id}`, {
         headers: {
           Authorization: token,
         },
       });
-      console.log(res.data);
       setPost(res.data);
     } catch (e) {
       console.log('데이터 패치 에러', e);

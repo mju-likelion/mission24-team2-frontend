@@ -1,8 +1,6 @@
 import PageContainer from './PageContainer';
 import styled from '@emotion/styled';
-import MyToggleBtn from './ToggleBtn';
-import { Children, useState } from 'react';
-import LoginBox from './LoginBox';
+import { useState } from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Logo from '../img/svg/Logo';
@@ -28,7 +26,13 @@ const ReviewBox = ({ onFilter, children }) => {
       <Wrap>
         <SideBar>
           <Logo width={'380'} height={'54'} />
-          <Button onClick={() => navigate('/write')}>글쓰기</Button>
+          <Button
+            variant='outlined'
+            sx={{ marginBottom: '10px' }}
+            onClick={() => navigate('/write')}
+          >
+            글쓰기
+          </Button>
           <Inputs
             name='searchInstructor'
             value={searchText}
@@ -131,9 +135,8 @@ const ReviewBox = ({ onFilter, children }) => {
               </ToggleButton>
             </ToggleButtonGroup>
           </ToggleWrap>
-          {/* <LoginBox></LoginBox> */}
         </SideBar>
-        <ChildBox>{children}</ChildBox>
+        {children}
       </Wrap>
     </PageContainer>
   );
@@ -151,7 +154,5 @@ const Wrap = styled.div`
 const SideBar = styled.div`
   width: 420px;
 `;
-
-const ChildBox = styled.div``;
 
 export default ReviewBox;

@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import StarIcon from '@mui/icons-material/Star';
 import { useNavigate } from 'react-router-dom';
 import Rating from '@mui/material/Rating';
 import megastudy from '../img/megastudy.png';
@@ -18,6 +17,7 @@ const PostContainer = ({ post }) => {
   } else {
     pic = daesung;
   }
+
   return (
     <Contents>
       <Icon
@@ -31,27 +31,27 @@ const PostContainer = ({ post }) => {
         <Logo>
           <img src={pic || 'https://via.placeholder.com/150'} alt='샘플이미지' width={200} />
         </Logo>
-        {/* <BoxTitle>
+        <BoxTitle>
           <SmallGray>과목</SmallGray>
-          <Title>{post.subject || '???'}</Title>
+          <Title>{post.category || '???'}</Title>
         </BoxTitle>
         <BoxTitle>
           <SmallGray>강사명</SmallGray>
-          <Title>{post.author || '???'}</Title>
+          <Title>{post.lecturer || '???'}</Title>
         </BoxTitle>
         <BoxTitle>
           <SmallGray>강의명</SmallGray>
           <Title>{post.lecture || '강의를 찾을 수 없습니다.'}</Title>
-        </BoxTitle> */}
+        </BoxTitle>
       </TopDiv>
       <LineDiv>
         <SmallGray>제목</SmallGray>
-        <SmallBlack>{post.subject || '강의를 찾을 수 없습니다.'}</SmallBlack>
+        <SmallBlack>{post.title || '강의를 찾을 수 없습니다.'}</SmallBlack>
       </LineDiv>
-      {/* <LineDiv>
+      <LineDiv>
         <SmallGray>작성자</SmallGray>
-        <SmallBlack>{post.postId || '?????'}</SmallBlack>
-      </LineDiv> */}
+        <SmallBlack>{post.postId || '시골집**'}</SmallBlack>
+      </LineDiv>
       <LineDiv>
         <SmallGray>평점</SmallGray>
         <RatingDiv>
@@ -67,7 +67,7 @@ const PostContainer = ({ post }) => {
 };
 
 const Contents = styled.div`
-  width: 80%;
+  width: 60%;
   min-height: 500px;
   border-radius: 20px;
   margin-top: 60px;
@@ -82,20 +82,18 @@ const TopDiv = styled.div`
   align-items: center;
   justify-content: row;
   width: 100%;
-  //background-color: green;
   margin-bottom: 20px;
-  //gap: 0 30px;
 `;
 
 const Logo = styled.div`
   display: flex;
   margin-left: 110px;
+  margin-right: 50px;
   align-items: center;
   justify-content: center;
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  //margin-left: -35%;
 `;
 
 const SmallBlack = styled.p`
@@ -150,14 +148,6 @@ const RatingDiv = styled.div`
   margin-top: -3px;
   margin-left: 5px;
   width: 1100px;
-`;
-
-const InDiv = styled.div`
-  display: flex;
-  width: 100%;
-  margin-left: 200px;
-  //justify-content: flex-end;
-  // background-color: red;
 `;
 
 export default PostContainer;
