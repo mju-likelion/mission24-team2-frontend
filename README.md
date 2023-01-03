@@ -10,7 +10,9 @@
 ```
 
 ## ✨ Demo
+
 ### SpotLight란?
+
 ```
 SpotLight는 고등학생을 대상으로 한 인터넷 강의 수강평을 찾아볼 수 있는 사이트입니다,
 
@@ -24,6 +26,7 @@ SpotLight는 고등학생을 대상으로 한 인터넷 강의 수강평을 찾�
 ```
 
 ### 시작화면
+
 <img width="1487" alt="시작화면" src="https://user-images.githubusercontent.com/63037629/188209448-f30d7b23-75b4-4a89-988e-7e5d3d3d9d76.png">
 
 ```
@@ -33,6 +36,7 @@ SpotLight는 고등학생을 대상으로 한 인터넷 강의 수강평을 찾�
 ```
 
 ## 로그인
+
 <img width="1680" alt="로그인" src="https://user-images.githubusercontent.com/63037629/188209830-d8233071-0343-4ad8-a8d1-6c61aca3d004.png">
 
 ```
@@ -42,8 +46,8 @@ JWT 토큰은 로컬 스토리지에 저장, 관리됩니다.
 ```
 
 ## 회원가입
-![회원가입](https://user-images.githubusercontent.com/63037629/188210020-f463ad15-89b6-4c16-8404-622cfead4476.gif)
 
+![회원가입](https://user-images.githubusercontent.com/63037629/188210020-f463ad15-89b6-4c16-8404-622cfead4476.gif)
 
 ```
 모든 입력은 유효성 검증을 실행합니다.
@@ -52,14 +56,15 @@ JWT 토큰은 로컬 스토리지에 저장, 관리됩니다.
 ```
 
 ## 글 목록
-![게시물 리스트](https://user-images.githubusercontent.com/63037629/188210222-a2c32afc-a2d3-4cf7-88a2-b3fbda3e212c.gif)
 
+![게시물 리스트](https://user-images.githubusercontent.com/63037629/188210222-a2c32afc-a2d3-4cf7-88a2-b3fbda3e212c.gif)
 
 ```
 작성된 리뷰들을 한눈에 볼 수 있는 공간입니다. 왼쪽 버튼을 통해 과목별로 필터링이 가능합니다.
 ```
 
 ## 글 등록
+
 ![게시물 등록](https://user-images.githubusercontent.com/63037629/188210710-d25599b3-1119-4309-943a-348352de39bc.gif)
 
 ```
@@ -71,6 +76,7 @@ JWT 토큰은 로컬 스토리지에 저장, 관리됩니다.
 ```
 
 ## 리뷰 열람
+
 <img width="1668" alt="게시물 상세" src="https://user-images.githubusercontent.com/63037629/188210881-090ac4ec-26a9-4386-99db-1fc47c61cd62.png">
 
 ```
@@ -131,6 +137,7 @@ yarn start
 - Recoil ([Guid](https://recoiljs.org/ko/docs/introduction/installation))
 
 ## 👩‍👦‍👦 Team
+
 - 김민규 (Back-End)
 - 박은서 (Front-End)
   - 기획 및 전체 UI 디자인
@@ -144,3 +151,5 @@ yarn start
   - 작성된 리뷰 컴포넌트 개발
   - 글 등록 로직 개발
 - 조민지 (Front-End)
+  - 과목별 toggle 버튼 및 side bar 컴포넌트 개발
+  - 각 review box 및 review list 컴포넌트 개발
